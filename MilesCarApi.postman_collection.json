@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "fbdb0742-89a0-4f43-a726-e09e646a9286",
+		"name": "MilesCarApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6383144"
+	},
+	"item": [
+		{
+			"name": "Localidad",
+			"item": [
+				{
+					"name": "Crear Localidad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"engativa\",\r\n    \"sedes\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7286/api/localidad",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"localidad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar localidad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7286/api/localidad/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"localidad",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seleccionar por ID localidad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7286/api/localidad/eb1acee7-07ff-4811-b833-f22b347ff1b4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"localidad",
+								"eb1acee7-07ff-4811-b833-f22b347ff1b4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sede",
+			"item": [
+				{
+					"name": "Crear sede",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Sede 1 Suba\",\r\n    \"localidadId\":\"eb1acee7-07ff-4811-b833-f22b347ff1b4\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7286/api/sede",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"sede"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Sede",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7286/api/sede",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"sede"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Seleccionar por Id Sede",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7286/api/sede/0beb8dd2-1753-44b3-9233-3cbc3ef5fc26",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"sede",
+								"0beb8dd2-1753-44b3-9233-3cbc3ef5fc26"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehiculo",
+			"item": [
+				{
+					"name": "Crear Vehiculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"renault sandero 1.6v\",\r\n    \"tipo\": \"Automovil\",\r\n    \"costo\": 120000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7286/api/vehiculo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"vehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Vehiculo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7286/api/vehiculo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"vehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seleccionar por id vehiculo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7286/api/vehiculo/a994276b-bbcb-405d-9606-1ac901bbe083",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"vehiculo",
+								"a994276b-bbcb-405d-9606-1ac901bbe083"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehiculo por sede",
+			"item": [
+				{
+					"name": "crear Vehiculo por sede",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehiculoId\": \"a994276b-bbcb-405d-9606-1ac901bbe083\",\r\n    \"sedeId\": \"0beb8dd2-1753-44b3-9233-3cbc3ef5fc26\",\r\n    \"cantidadEnStock\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7286/api/Vehiculoxsede/create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"Vehiculoxsede",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7286/api/Vehiculoxsede",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7286",
+							"path": [
+								"api",
+								"Vehiculoxsede"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
